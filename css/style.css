@@ -2,10 +2,14 @@
     margin: 0px; 
     padding: 0px; 
 }
-
 body {
     text-align: center;  
 }
+
+main {
+    padding-top: 78px;
+}
+
 a {
     text-decoration: none;
 }
@@ -46,11 +50,20 @@ a {
     width: 200px;
     margin: 0 auto;
     padding-bottom: 5px;
+    padding-right: 4px;
 }
 
 .logo img {
     max-width: 200px;
     padding-left: 20px;
+}
+
+/* トップ画像 */
+.top img{
+    width: 100%;
+    max-height: 350px;
+    margin-bottom: 50px;
+    object-fit: cover;
 }
 
 
@@ -123,6 +136,16 @@ a {
     color: #fff;
 }
 
+/* メイン */
+.img_circle {
+    border-radius: 50%;
+    max-width:  150px;
+    max-height: 150px;
+}
+
+
+
+
 /* フッター */
 .footer {
     height: 24px;
@@ -149,6 +172,7 @@ a {
 .copyright small {
     font-size: 11px;
 }
+
 
 /* セクション指定 */
 /* .section {
