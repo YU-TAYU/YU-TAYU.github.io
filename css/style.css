@@ -3,10 +3,12 @@
     padding: 0px; 
 }
 
+body {
+    text-align: center;  
+}
 a {
     text-decoration: none;
 }
-
 .wf-body {
   font-family: "Sawarabi Mincho";
 }
@@ -123,9 +125,11 @@ a {
 
 /* フッター */
 .footer {
-    padding: 40px 0 30px;
+    height: 24px;
+    padding: 20px 0 20px;
     color: #032559;
     text-align: center;
+    border-top: solid 1.6px #f5f5ff;
 }
 .footer-logo {
     margin: 10px 0;
