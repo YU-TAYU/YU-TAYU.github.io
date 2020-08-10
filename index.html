@@ -1,19 +1,158 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Hello GitHub Pages</title>
-	<link href="css/index.css" rel="stylesheet" type="text/css">
-	<link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Architects+Daughter|Coming+Soon' rel='stylesheet' type='text/css'>
-</head>
-<h2 class="freder swing">YU-TAYU About me</h2>
-<h3 class="coming">Enjoy your life!</h3>
-<img href=img/photo1.png>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Mishima Yuki portfolio</title>
+    <meta name="description" content="Yuki MISHIMA's portfolio">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="format-detection" content="telephone=no">
+    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 
 
-<body>
+    <!-- フォント -->
+    <link href="https://fonts.googleapis.com/earlyaccess/hannari.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script|Mansalva|Nunito|Playfair+Display|Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho" rel="stylesheet">
 
-</body>
+    <script src="https://kit.fontawesome.com/4176bab921.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+  </head>
+
+  <body class="wf-body">
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="wrapper">
+            <div class="title_area">
+                <span class="logo">
+                    <a href="./index.html">
+                        <img src="./img/logo.png" alt="ロゴ">
+                    </a>
+                </span>
+            </div>
+            <div class="menu_area">
+                <span class="nav_toggle">
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+            </div>
+        </div>
+    
+        <nav class="nav">
+            <ul class="nav_menu_ul">
+                <li class="nav_menu_li"><a href="#top" titile="ABOUT ME"></a>TOP</li>
+                <li class="nav_menu_li"><a href="#aboutme" titile="ABOUT ME">ABOUT ME</a></li>
+                <li class="nav_menu_li"><a href="#contact" title="CONTACT">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+        <div id="app">
+
+        <!-- メインコンテンツ -->
+        <main>
+            <div class="top"></div>
+
+            <div id="container-1">
+                <h2 class="section_title">WORKS</h2>
+
+                <section class="col" v-for="design in designs" :key="design.title">
+                    <figure class="col-image">
+                        <a :href="design.url" v-show="design.url">
+                            <img :src="design.img" :alt="design.title">
+                        </a>
+                    </figure>
+                    <h3 class="heading-topic">
+                        <a :href="design.url">
+                            {{ design.title }}
+                        </a>
+                    </h3>
+                    <p align="center">{{ design.discription }}</p>
+                </section>
+            </div>
+
+            <div id="container-2">
+                <h2 class="section_title">OTHERS</h2>
+                <h3 align="center">Bucchake School</h3>
+                We hold lesson (English and Art) on an irregular basis.
+                <a href="https://peatix.com/group/7271360/view">
+                    Event List
+                </a>
+            </div>
+
+
+            <section class="section">
+                <h2 class="section_title"><a id="aboutme">ABOUT ME</a></h2>
+                <section class="col">
+                    <h3 align="center">Yuki Mishima</h3>
+                    <p align="center">Design and Coding</p>
+                    <p align="center">PHP, Laravel, Vue.js, MySQL</p>
+
+                    <h4 align="center">Education</h4>
+                    <p align="center">Master of Science in Library and Information Studies</p>
+                    <p align="center">University of Tsukuba, Japan</p>
+                    <p align="center">March, 2019</p>
+
+                    <h4 align="center">Work history</h4>
+                    <p align="center">2019- Software Engineer and Illustrator</p>
+                </section>
+            </section>
+
+            <section class="section">
+                <h2 class="section_title"><a id="contact">CONTACT</a></h2>
+
+                <div class="footer-sns">
+                    <span class="twitter">
+                    <a href="https://twitter.com/galaxy000yuta" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                    </span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <!-- <nav class="nav">
+            <ul class="nav_menu_ul">
+                <li class="nav_footer_menu_li"><a href="#top" titile="ABOUT ME"></a>TOP</li>
+                <li class="nav_footer_menu_li"><a href="#aboutme" titile="ABOUT ME">ABOUT ME</a></li>
+                <li class="nav_footer_menu_li"><a href="#contact" title="CONTACT">CONTACT</a></li>
+            </ul>
+        </nav> -->
+        <p class="copyright">
+            <small>&copy;Copyright 2019 Mishima Yuki.</small>
+        </p>
+    </footer>
+
+    <script>
+
+    $('.nav_toggle').on('click', function () {
+        $('.nav_toggle, .nav').toggleClass('show');
+    });
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                designs: [
+                    {
+                        title: "I don't want to go to school today.",
+                        discription: "Browser Game.",
+                        url: "https://novelgame.jp/games/show/2247",
+                        img: "./img/gakkouheikitakunai.png"
+                    },
+                    {
+                        title: "I don't want to go to school today.",
+                        discription: "Browser Game.",
+                        url: "https://novelgame.jp/games/show/2247",
+                        img: "./img/gakkouheikitakunai.png"
+                    }
+                ],
+            }
+        })
+    </script>
+  </body>
 </html>
-

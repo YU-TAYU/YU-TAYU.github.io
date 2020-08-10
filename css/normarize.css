@@ -1,0 +1,25 @@
+.top {
+    max-height: 120px;
+    margin-bottom: 50px;
+    background: url() center bottom / cover no-repeat;
+}
+/* 
+.container{
+  width: 100%;
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.col {
+    max-width: 400px;
+    margin: 0 auto 50px;
+}
+.col-image {
+    margin-bottom: 10px;
+}
+.col p {
+    margin-bottom: 0;
+} */
+
+
