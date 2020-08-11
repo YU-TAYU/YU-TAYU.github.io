@@ -253,7 +253,23 @@ a:visited {
     color: #333;
 }
 
+/* タブレット */
+@media screen and (max-width: 1176px) {
 
+#container-1 > div {
+    padding: 16px;
+    width: 350px;
+    max-height: 350px;
+}
+
+.col img{
+    text-align: center;
+    border: solid 1px #f5f5ff;
+    max-width: auto;
+    max-height: 200px;
+}
+
+/* スマホ */
 @media screen and (max-width: 783px) {
 
 #container-1 > div {
