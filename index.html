@@ -59,22 +59,23 @@
                 <img src="./img/top.png">
             </div>
 
-            <div id="container-1">
-                <h2 class="section_title">WORKS</h2>
-
-                <section class="col" v-for="design in designs" :key="design.title">
-                    <figure class="col-image">
-                        <a :href="design.url" v-show="design.url">
-                            <img :src="design.img" :alt="design.title">
-                        </a>
-                    </figure>
-                    <h3 class="heading-topic">
-                        <a :href="design.url">
-                            {{ design.title }}
-                        </a>
-                    </h3>
-                    <p align="center">{{ design.discription }}</p>
-                </section>
+            <div>
+            <h2 class="section_title">WORKS</h2>
+                <div id="container-1">
+                    <div class="col" v-for="design in designs" :key="design.title">
+                        <figure class="col-image">
+                            <a :href="design.url" v-show="design.url || design.img">
+                                <img :src="design.img" :alt="design.title" v-show="design.img">
+                            </a>
+                        </figure>
+                        <h3 class="heading-topic">
+                            <a :href="design.url">
+                                {{ design.title }}
+                            </a>
+                        </h3>
+                        <p align="center">{{ design.discription }}</p>
+                    </div>
+                </div>
             </div>
 
             <div id="container-2">
@@ -99,16 +100,16 @@
                     <p align="center">Design and Coding</p>
                     <p align="center">PHP, Laravel, Vue.js, MySQL</p>
 
-                    <h4 align="center" style="padding: 16px 0 0 8px;">Education</h4>
+                    <h4 align="center" style="padding: 16px 0 0 8px; color: grey;">Education</h4>
                     <p align="center">Master of Science in Library and Information Studies</p>
                     <p align="center">University of Tsukuba, Japan</p>
                     <p align="center">March, 2019</p>
 
-                    <h4 align="center" style="padding: 16px 0 0 8px;">Work history</h4>
+                    <h4 align="center" style="padding: 16px 0 0 8px; color: grey;">Work history</h4>
                     <p align="center">2019- Software Engineer and Illustrator</p>
             </div>
 
-            <section class="section">
+            <section class="section" style="padding-top: 40px;">
                 <h2 class="section_title"><a id="contact">CONTACT</a></h2>
 
                 <div class="footer-sns">
@@ -143,16 +144,22 @@
             data: {
                 designs: [
                     {
+                        title: "Biblio Battle",
+                        discription: "Page design",
+                        url: "",
+                        img: "./img/bibliobattle.png"
+                    },
+                    {
                         title: "I don't want to go to school today.",
-                        discription: "Browser Game.",
+                        discription: "Browser Game",
                         url: "https://novelgame.jp/games/show/2247",
                         img: "./img/gakkouheikitakunai.png"
                     },
                     {
-                        title: "I don't want to go to school today.",
-                        discription: "Browser Game.",
-                        url: "https://novelgame.jp/games/show/2247",
-                        img: "./img/gakkouheikitakunai.png"
+                        title: "Near Future Library Exhibition",
+                        discription: "Poster Design",
+                        url: "",
+                        img: "./img/kinmirai2017.png"
                     }
                 ],
             }
