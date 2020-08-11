@@ -55,11 +55,11 @@ a {
 
 .logo img {
     max-width: 200px;
-    padding-left: 20px;
+    padding-right: 20px;
 }
 
 /* トップ画像 */
-.top img{
+#top img{
     width: 100%;
     max-height: 350px;
     margin-bottom: 50px;
@@ -129,7 +129,7 @@ a {
     padding: 8px 0;
 }
 .nav li:hover {
-    background-color: #6600CC;
+    background-color: #5300a6;
 }
 .nav li a{
     display: block;
@@ -137,18 +137,24 @@ a {
 }
 
 /* メイン */
+#container-2 {
+    padding: 16px 0 0 0;
+}
+
+#container-3 {
+    padding: 40px 0 0 0;
+}
+
 .img_circle {
     border-radius: 50%;
     max-width:  150px;
     max-height: 150px;
+    padding: 20px;
 }
-
-
-
 
 /* フッター */
 .footer {
-    height: 24px;
+    height: 32px;
     padding: 20px 0 20px;
     color: #032559;
     text-align: center;
@@ -175,7 +181,7 @@ a {
 
 
 /* セクション指定 */
-/* .section {
+.section {
     max-width: 1000px;
     margin: 50px auto;
     padding: 0 10px;
@@ -198,13 +204,6 @@ a {
     text-align: center;
     color: #032559;
 }
-
-.top {
-    height: 200px;
-    margin-bottom: 50px;
-    background: url("../img/top.png") center bottom / cover no-repeat;
-}
-
 .col {
     max-width: 300px;
     margin: 0 auto 50px;
@@ -213,75 +212,27 @@ a {
     margin-bottom: 10px;
 }
 .col img{
-    max-width: 300px;
+    max-width: 400px;
     margin-left: -40px;
 }
 .col p {
     margin-bottom: 0;
 }
 
-.fab {
-
-} */
-
 .twitter a:visited {
     color: #1DA1F2;
 }
 
-.facebook a:visited {
-    color: #3B5998;
+.github a:visited {
+    color: #333;
 }
 
-@media screen and (min-width: 768px) {
 /* 
+@media screen and (min-width: 768px) {
+
     .header {
         padding: 40px 0 0;
     }
-
-    .logo {
-        width: auto;
-        margin: 0 0 20px;
-        padding: 0;
-        text-align: center;
-    }
-
-    .nav {
-        padding: 40px 0;
-    }
-
-    .nav-list {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        padding: 0;
-    }
-
-    .nav-list li {
-        list-style: none;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 1 auto;
-        flex: 0 1 auto;
-        padding: 0 20px;
-        line-height: 1;
-        border-right: 1px solid #fff;
-    }
-
-    .nav-list li:first-child {
-        border-left: 1px solid #fff;
-    }
-
-    .nav-toggle:checked ~ .nav .nav-list {
-        display: -webkit-box;
-        display: -ms-flex-box;
-        display: flex;
-    }
-
     .section {
         margin-bottom: 100px;
         margin-bottom: 50px;
