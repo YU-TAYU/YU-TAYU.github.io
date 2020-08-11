@@ -219,10 +219,16 @@ a {
     margin-bottom: 0;
 }
 
+.twitter a {
+     color: #1DA1F2;
+}
 .twitter a:visited {
     color: #1DA1F2;
 }
 
+.github a {
+    color: #333;
+}
 .github a:visited {
     color: #333;
 }
