@@ -60,8 +60,27 @@
             </div>
 
             <div>
-            <h2 class="section_title">WORKS</h2>
-                <div id="container-1">
+            <h2 class="section_title">SYSTEMS</h2>
+                <div class="container-1">
+                    <div class="col" v-for="system in systems" :key="system.title">
+                        <figure class="col-image">
+                            <a :href="system.url" v-show="system.url || system.img">
+                                <img :src="system.img" :alt="system.title" v-show="system.img">
+                            </a>
+                        </figure>
+                        <h3 class="heading-topic">
+                            <a :href="system.url">
+                                {{ system.title }}
+                            </a>
+                        </h3>
+                        <p align="center">{{ system.discription }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div style="padding: 20px 0 0 0;">
+            <h2 class="section_title">DESIGNS</h2>
+                <div class="container-1">
                     <div class="col" v-for="design in designs" :key="design.title">
                         <figure class="col-image">
                             <a :href="design.url" v-show="design.url || design.img">
@@ -150,16 +169,37 @@
                         img: "./img/bibliobattle.png"
                     },
                     {
+                        title: "Near Future Library Exhibition",
+                        discription: "Poster Design",
+                        url: "https://kinmirai.tumblr.com/post/166976491965",
+                        img: "./img/kinmirai2017.png"
+                    },
+                    {
+                        title: "Illustration",
+                        discription: "For Web Page",
+                        url: "",
+                        img: "./img/illust.png"
+                    }
+                ],
+                
+                systems: [
+                    {
                         title: "I don't want to go to school today.",
                         discription: "Browser Game",
                         url: "https://novelgame.jp/games/show/2247",
                         img: "./img/gakkouheikitakunai.png"
                     },
                     {
-                        title: "Near Future Library Exhibition",
-                        discription: "Poster Design",
-                        url: "https://kinmirai.tumblr.com/post/166976491965",
-                        img: "./img/kinmirai2017.png"
+                        title: "Tsugishi",
+                        discription: "Browser Game",
+                        url: "https://novelgame.jp/games/show/3258",
+                        img: "./img/tsugishi.png"
+                    },
+                    {
+                        title: "Express Diary",
+                        discription: "TypeScript Web Service(Mock)",
+                        url: "",
+                        img: "./img/express-diary.png"
                     }
                 ],
             }

@@ -144,16 +144,16 @@ a:visited {
 }
 
 /* メイン */
-#container-1 {
+.container-1 {
     align-content: center;
     display: flex;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: auto;
 }
-#container-1 > div {
+.container-1 > div {
     padding: 16px;
-    width: 360px;
+    width: 368px;
     max-height: 600px;
     text-align: center;
 }
@@ -256,7 +256,7 @@ a:visited {
 /* タブレット */
 @media screen and (max-width: 1176px) {
 
-#container-1 > div {
+.container-1 > div {
     padding: 16px;
     width: 350px;
     max-height: 350px;
@@ -272,7 +272,7 @@ a:visited {
 /* スマホ */
 @media screen and (max-width: 783px) {
 
-#container-1 > div {
+.container-1 > div {
     padding: 16px;
     width: 100%;
     max-height: 400px;
