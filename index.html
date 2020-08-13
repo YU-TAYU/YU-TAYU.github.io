@@ -8,7 +8,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="format-detection" content="telephone=no">
     
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 
 
@@ -64,14 +63,18 @@
                 <div class="container-1">
                     <div class="col" v-for="system in systems" :key="system.title">
                         <figure class="col-image">
-                            <a :href="system.url" v-show="system.url || system.img">
+                            <a :href="system.url" v-if="system.url">
                                 <img :src="system.img" :alt="system.title" v-show="system.img">
                             </a>
+                            <img v-else :src="system.img" :alt="system.title" v-show="system.img">
                         </figure>
                         <h3 class="heading-topic">
-                            <a :href="system.url">
+                            <a :href="system.url" v-if="system.url">
                                 {{ system.title }}
                             </a>
+                            <template v-else>
+                                {{ system.title }}
+                            </template>
                         </h3>
                         <p align="center">{{ system.discription }}</p>
                     </div>
@@ -83,14 +86,18 @@
                 <div class="container-1">
                     <div class="col" v-for="design in designs" :key="design.title">
                         <figure class="col-image">
-                            <a :href="design.url" v-show="design.url || design.img">
+                            <a :href="design.url" v-show="design.img" v-if="design.url">
                                 <img :src="design.img" :alt="design.title" v-show="design.img">
                             </a>
+                             <img v-else :src="design.img" :alt="design.title" v-show="design.img">
                         </figure>
                         <h3 class="heading-topic">
-                            <a :href="design.url">
+                            <a :href="design.url" v-if="design.url">
                                 {{ design.title }}
                             </a>
+                            <template v-else>
+                                {{ design.title }}
+                            </template>
                         </h3>
                         <p align="center">{{ design.discription }}</p>
                     </div>
